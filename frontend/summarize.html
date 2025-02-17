@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Search and Summarization System</title>
+    <link rel="icon" href="/static/images/documents.png">
+    <link rel="stylesheet" href="/static/CSS_main/header.css">
+    <link rel="stylesheet" href="/static/CSS_summarize/summarize.css">
+    <link rel="stylesheet" href="/static/CSS_summarize/chatbot.css">
+</head>
+
+<body>  
+<!-- Header -->
+<header>
+  <nav>
+    <a class="logo" href="/main">Document Search and Summarization System</a>
+    <a href="https://github.com/ItsKerk" target="_blank" class="github">by @Kerk</a>
+  </nav>
+</header>
+
+<!-- File -->
+<div class="main"></div>
+
+<!-- Chatbot -->
+<div class="chatbotContainer">
+  <img src="/static/images/chatbot.png" alt="chatbotIcon" class="chatbotIcon">
+  <div class="chatbotOpen">
+      <div class="chatbotText">
+        <span class="chatbotPlaceHolder">
+          <b>Welcome to the Document Assistant!</b><br>
+          Im here to help you:<br><br>
+          <b>Summarize the file</b>for simpler understanding.
+        </span>
+        <div class="spacer"></div>
+      </div>
+      <div class="inputContainer">
+        <input type="text" class="chatbotInput" placeholder="Ex: Summarize file">
+        <img src="/static/images/up-arrow.png" alt="sendInput" class="sendInput">
+      </div>
+  </div>
+</div>
+</body>
+<script src="/static/JS_summarize/summarize.js"></script>
+<script src="/static/JS_summarize/chatbot.js"></script>
+</html>

@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    transition: all 0.3s ease;
+}
+
+*:hover{
+    transition: background-color 0.3s ease;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #f6f8fc;
+}
+
+/* === Header === */
+header{
+    display: flex;
+    padding: 10PX;
+    background-color: rgb(48,52,52);
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    margin:  auto;
+    width: 1200px;
+    font-size: 25px;
+    gap: 20px;
+}
+
+/* === Logo === */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* === Github Btn === */
+.github{
+    display: flex;
+    align-items: center;
+    max-width: 100px;
+    font-size: large;
+    padding: 5px;
+    color: rgb(48,52,52);
+    background-color: white;
+    border-radius: 20px; 
+    text-decoration: none;
+}
+
+/* == Responsive Design == */
+@media screen and (max-width: 1020px) {
+    nav{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo{
+        justify-content: center;
+        font-size: 30px;
+    }
+
+    .github {
+        justify-content: center;
+        width: 100%;
+    }
+}

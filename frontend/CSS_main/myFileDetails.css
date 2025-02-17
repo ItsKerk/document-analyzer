@@ -1,0 +1,122 @@
+/* === Info Popup === */
+.myFileDetails {
+    position: relative;
+}
+
+.moreInfo{
+    width: 20px;
+    cursor: pointer;
+}
+
+.moreInfo:hover{
+    background-color: #e3e7ed;
+    border-radius: 20px;
+}
+
+.moreInfoPopUp {
+    display: none;                 
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 220px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(48, 52, 52, 0.3);
+    z-index: 2;
+    position: absolute;
+    bottom: 100%; /* Position above the three dots */
+    left: 50%; /* Center horizontally relative to the three dots */
+    transform: translateX(-50%); /* Adjust for centering */
+    transition: left 0.2s ease-in-out;
+}
+
+.popupList{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.popupList:hover{
+    background-color: #e3e7ed;
+}
+
+.popupIcon{
+    width: 25px;
+    height: auto; 
+    margin: 0 15px;
+}
+
+.popupText{
+    font-size: 15px;
+}
+
+/* == Rename File Popup == */
+.renameFilePopup {
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    border-radius: 10px;
+    gap: 20px;
+    background: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(48, 52, 52, 0.5);
+    z-index: 4;
+}
+
+.renameFilePopup h2 {
+    font-weight: normal;
+    font-size: 25px;
+}
+  
+.renameFilePopup p {
+    font-size: 18px;
+    color: #666666;
+}
+
+/* == New File Name == */
+.newFileNameInput {
+    width: 280px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+   
+/* == Popup Btns == */
+.renameFileBtns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.closeFileBtn,.renameFileBtn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* == Close Popup == */
+.closeFileBtn {
+    background-color: #f1f3f7;
+}
+  
+.closeFileBtn:hover {
+    background-color: #e3e7ed;
+}
+  
+/* == Rename File Btn == */
+.renameFileBtn {
+    background-color: rgba(48, 52, 52);;
+    color: #ffffff;
+}
+  
+.renameFileBtn:hover {
+    background-color: black;
+}

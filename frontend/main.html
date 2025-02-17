@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Search and Summarization System</title>
+    <link rel="icon" href="/static/images/documents.png">
+    <link rel="stylesheet" href="/static/CSS_main/header.css">
+    <link rel="stylesheet" href="/static/CSS_main/uploadFiles.css">
+    <link rel="stylesheet" href="/static/CSS_main/myFiles.css">
+    <link rel="stylesheet" href="/static/CSS_main/myFileDetails.css">
+    <link rel="stylesheet" href="/static/CSS_main/search.css">
+</head>
+
+<body>  
+<!-- Header -->
+<header>
+  <nav>
+    <a class="logo" href="">Document Search and Summarization System</a>
+    <a href="https://github.com/ItsKerk" target="_blank" class="github">by @Kerk</a>
+  </nav>
+</header>
+
+<div class="main">
+  <!-- Upload File -->
+  <div class="uploadContainer">
+    <div class="dottedContainer">
+      <label for="filesInput">
+        <img src="/static/images/pdf-to-text-icon.svg" alt="Upload File" style="cursor: pointer;" />
+      </label>
+      <div class="customUpload">
+        <span>Upload PDF, DOC, DOCX Files</span>
+        <label for="filesInput" class="uploadFileBtn">Browse</label>
+        <input type="file" id="filesInput" accept=".pdf, .doc, .docx" multiple style="display: none;" />
+      </div>      
+    </div>
+
+    <!-- Manage File -->
+    <div class="filesContainer">
+      <div class="filesList"></div>
+      <div class="btnsContainer">
+        <button class="clearBtn">Clear All</button>
+        <button class="uploadBtn">Upload</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search in Files -->
+  <div class="searchContainer">
+    <div class="searchKeywords">
+      <p>Search for <b>keywords</b> or <b>phrases</b>, and retrieve <b>relevant sections</b> from uploaded Files</p>
+      <div class="searchInpBtn">
+        <input type="text" class="searchKeywordsInput" placeholder="Type your message...">
+        <button class="searchBtn">Search</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- My Uploaded Files -->
+  <div class="myFilesContainer">
+    <h1>My Files</h1>
+    <div class="myFilesList">
+    </div>
+  </div>
+</div>
+
+<!-- Rename Uploaded File-->
+<div class="overlay"></div>
+<div class="renameFilePopup">
+  <h2>Rename</h2>
+  <p>Type a new name for the file:</p>
+  <input type="text" class="newFileNameInput"/>      
+  <div class="renameFileBtns">
+    <button class="closeFileBtn">Close</button>
+    <button class="renameFileBtn">OK</button>
+  </div>
+</div>
+
+</body>
+<script src="/static/JS_main/uploadFiles.js"></script>
+<script src="/static/JS_main/myFiles.js"></script>
+<script src="/static/JS_main/myFileDetails.js"></script>
+<script src="/static/JS_main/search.js"></script>
+</html>

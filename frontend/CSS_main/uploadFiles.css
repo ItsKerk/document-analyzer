@@ -1,0 +1,195 @@
+/* === Main === */
+.main{
+    margin:  auto;
+    max-width: 1200px;
+    padding-top: 30px;
+    width: 100%;
+}
+
+/* === WhiteBackground === */
+.uploadContainer{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    background-color: white;
+    width: 1100px;
+    height: 370px;
+    padding: 20px;
+    border-radius: 15px;
+    gap: 15px;
+}
+
+/* === Dotted Container === */
+.dottedContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 3px dashed rgba(48, 52, 52, 0.2);
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    max-height: 330px;
+}
+
+/* === Upload === */
+.customUpload{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.customUpload span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.uploadFileBtn {
+    background-color: #f1f3f7;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 20px;
+    width: 150px;
+}
+  
+.uploadFileBtn:hover {
+    background-color: #e3e7ed;
+}
+
+/* == Responsive Design == */
+@media screen and (max-width: 1150px) {
+    .main {
+        width: 95%;
+    }
+    .uploadContainer {
+        width: 100%;
+    }
+}
+
+/* == Files Container == */
+.filesContainer{
+    display: none;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    border-radius: 15px;
+    gap: 10px;
+}
+
+.filesList{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 85%;
+    gap: 10px;
+    overflow-y: auto;
+}
+
+/* == Files == */
+.file{
+    display: flex;
+    gap: 15px;
+    border: 1px solid rgba(48, 52, 52, 0.1);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.file:hover{
+    background-color: #f6f8fc;
+}
+
+.fileIcon{
+    height: 62px;
+    width: 50px;
+}
+
+.fileInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    flex: 1;
+    min-width: 0;
+}
+
+.fileName {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.fileSize{
+    font-size: 15px;
+}
+
+.deleteFile{
+    width: 15px;
+    height: auto;
+    cursor: pointer;
+    margin-left: auto;
+    align-self: center; 
+    margin-right: 5px;
+}
+
+.deleteFile:hover{
+    content: url('../images/x-red.png');
+}
+
+/* == Buttons == */
+.btnsContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 15%;
+}
+
+.clearBtn , .uploadBtn{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    width: 150px;
+}
+
+.clearBtn{
+    background-color: #f1f3f7;
+}
+
+.clearBtn:hover {
+    background-color: #e3e7ed;
+}
+
+.uploadBtn{
+    color: white;
+    background-color: rgb(48,52,52);
+}
+
+.uploadBtn:hover {
+    background-color: black;
+}
+
+/* == Responsive Design == */
+@media screen and (max-width: 760px) {
+    .uploadContainer{
+        flex-direction: column;
+    }
+
+    .filesContainer,.dottedContainer{
+        width: 100%;
+    }
+
+    .filesList{
+        max-height: 280px;
+    }
+}

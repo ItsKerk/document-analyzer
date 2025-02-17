@@ -1,0 +1,131 @@
+/* === Chatbot === */
+.chatbotContainer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.chatbotIcon {
+    width: 80px;
+    height: auto;
+    margin: 15px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: width 0.2s ease, margin 0.2s ease;
+}
+
+.chatbotIcon:hover {
+    width: 90px;
+    margin: 10px;
+}
+
+/* Chatbot Open Container */
+.chatbotOpen {
+    display: none;
+    flex-direction: column;
+    width: 450px;
+    height: calc(95vh - 100px); /* Adjust based on viewport height */
+    max-height: 675px;
+    min-height: 200px;
+    overflow-y: auto;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid rgb(48,52,52,0.3);
+    gap: 10px;
+    position: absolute;
+    bottom: 100%;   /* Position above the three dots */
+    right: 15px;
+    padding: 10px;
+}
+
+/* Chatbot Text */
+.chatbotText {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 200px;
+    overflow-y: auto;
+    gap: 10px;
+}
+
+/* Chatbot Placeholder */
+.chatbotPlaceHolder {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; 
+    padding: 20px; 
+    font-size: 20px;
+    font-style: italic;
+}
+
+.chatbotText .spacer {
+    flex-grow: 1;
+}
+
+/* Chatbot Input - Output */
+.userInput, .chatbotOutput{
+    overflow-wrap: break-word;
+    padding: 10px;
+    font-size: 20px;
+    max-width: 80%;
+    margin: 10px;
+}
+
+.userInput{
+    text-align: end;
+    align-self: flex-end;
+    border-radius: 10px 0px 10px 10px;
+    border: 1px solid rgb(48,52,52,0.3);
+}
+
+.chatbotOutput{
+    align-self: flex-start;
+    border-radius: 0px 10px 10px 10px;
+    border: 1px solid rgb(48,52,52);
+}
+
+/* Input Container */
+.inputContainer {
+    position: relative;
+    width: 100%;
+}
+  
+.chatbotInput {
+    height: 50px;
+    width: 100%;
+    padding: 10px 60px 10px 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 20px;
+    box-shadow: 3px 3px 10px rgba(48, 52, 52, 0.2);
+}
+
+.sendInput {
+    position: absolute;
+    right: 10px;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+    height: 30px; 
+    width: auto;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.sendInput:hover {
+    opacity: 1;
+}
+
+/* == Responsive Design == */
+@media screen and (max-width: 499px) {
+    .chatbotOpen{
+        width: 360px;
+    }
+
+    .chatbotInput,.userInput, .chatbotOutput ,.chatbotPlaceHolder{
+        font-size: 18px;
+    }
+}

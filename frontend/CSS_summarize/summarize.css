@@ -1,0 +1,137 @@
+/* === Main === */
+.main {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    height: 820px;
+    width: 825px;
+}
+
+/* == Responsive Design == */
+@media screen and (max-width: 900px) {
+    .main{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .main{
+        height: 790px;
+    }
+}
+
+/* === iframe for PDF === */
+.fileIframe { 
+    height: 100%;
+    width: 100%;
+}
+
+/* === text for DOC === */
+.fileTextContainer{
+    height: 100%;
+    border: 2px solid rgb(48,52,52,0.5);
+    border-radius: 10px;
+    padding: 20px 0px 20px 40px;
+    background-color: white;
+}
+
+.fileTextContainer p {
+    height: 100%;
+    font-size: 18px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    padding-right: 20px;
+}
+
+/* === Results from querry === */
+
+/* === Querry - Summary === */
+.queryContainer,.summaryContainer{
+    display: flex;
+    text-align: center;
+    background-color: white;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.queryContainer h1 ,.summaryContainer h1{
+    font-size: 30px;
+}
+
+.usersQuery{
+    width: 100%;
+    font-size: 25px;
+    word-wrap: break-word;
+}
+
+/* === Results === */
+.resultsContainer{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    gap: 25px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.resultSection{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #F2F5FF;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* === Results Text === */
+.resultText{
+    font-size: 22px;
+    width: 100%;
+    word-wrap: break-word;
+    margin-bottom: 30px;
+}
+
+/* === Results Name === */
+.resultName{
+    font-size: 17px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+/* === Results Score === */
+.resultScore{
+    font-size: 17px;
+    font-weight: normal;
+}
+
+@media screen and (max-width: 760px) {
+    .queryContainer h1{
+        font-size: 25px;
+    }
+    
+    .usersQuery{
+        font-size: 20px;
+    }
+    
+    .resultText{
+        font-size: 20px;
+    }
+
+    .resultName{
+        font-size: 15px;
+    }
+    
+    .resultScore{
+        font-size: 15px;
+    }
+}
